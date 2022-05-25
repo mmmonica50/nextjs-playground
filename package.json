@@ -1,0 +1,72 @@
+{
+  "name": "nextjs-playground",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "ESLINT_NO_DEV_ERRORS=true next dev",
+    "build": "yarn lint && next build",
+    "start": "next start",
+    "test:ts": "tsc --noEmit",
+    "lint": "yarn lint:format && yarn lint:js && yarn lint:next",
+    "lint:format": "prettier --check \"./**/*.{js,jsx,ts,tsx}\"",
+    "lint:js": "eslint \"./**/*.{js,jsx,ts,tsx}\"",
+    "lint:next": "next lint",
+    "lint:fix": "eslint \"./**/*.{js,jsx,ts,tsx}\" --fix",
+    "format": "prettier --write \"./**/*.{js,jsx,ts,tsx}\""
+  },
+  "dependencies": {
+    "@next/eslint-plugin-next": "^12.1.6",
+    "@testing-library/jest-dom": "^5.16.4",
+    "@testing-library/user-event": "^14.2.0",
+    "@types/jest": "^27.5.1",
+    "@typescript-eslint/eslint-plugin": "^5.26.0",
+    "@typescript-eslint/parser": "^5.26.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-react": "^7.30.0",
+    "eslint-plugin-react-hooks": "^4.5.0",
+    "eslint-plugin-testing-library": "^5.5.1",
+    "jest": "^28.1.0",
+    "next": "12.1.6",
+    "prettier": "^2.6.2",
+    "react": "18.1.0",
+    "react-dom": "18.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "17.0.35",
+    "@types/react": "18.0.9",
+    "@types/react-dom": "18.0.5",
+    "eslint": "^8.16.0",
+    "eslint-config-next": "12.1.6",
+    "typescript": "4.7.2"
+  },
+  "jest": {
+    "coverageThreshold": {
+      "global": {
+        "branches": 80,
+        "functions": 80,
+        "lines": 80,
+        "statements": 80
+      }
+    }
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --fix",
+      "git add"
+    ],
+    "*.{json,md,yml}": [
+      "prettier --write",
+      "git add"
+    ],
+    "*.{css,scss}": [
+      "stylelint --fix",
+      "git add"
+    ]
+  },
+  "browserslist": [
+    "last 4 versions"
+  ]
+}

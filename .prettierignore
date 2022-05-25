@@ -1,0 +1,6 @@
+.next
+*.d.ts
+*.config.js
+_bkp
+node_modules
+*.setup.js
