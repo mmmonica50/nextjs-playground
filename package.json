@@ -6,13 +6,15 @@
     "dev": "ESLINT_NO_DEV_ERRORS=true next dev",
     "build": "yarn lint && next build",
     "start": "next start",
+    "test": "yarn test:ts",
     "test:ts": "tsc --noEmit",
     "lint": "yarn lint:format && yarn lint:js && yarn lint:next",
     "lint:format": "prettier --check \"./**/*.{js,jsx,ts,tsx}\"",
     "lint:js": "eslint \"./**/*.{js,jsx,ts,tsx}\"",
     "lint:next": "next lint",
     "lint:fix": "eslint \"./**/*.{js,jsx,ts,tsx}\" --fix",
-    "format": "prettier --write \"./**/*.{js,jsx,ts,tsx}\""
+    "format": "prettier --write \"./**/*.{js,jsx,ts,tsx}\"",
+    "prepare": "husky install"
   },
   "dependencies": {
     "@emotion/react": "^11.9.0",
@@ -39,11 +41,14 @@
     "react-dom": "18.1.0"
   },
   "devDependencies": {
+    "@commitlint/cli": "^17.0.1",
+    "@commitlint/config-conventional": "^17.0.0",
     "@types/node": "17.0.35",
     "@types/react": "18.0.9",
     "@types/react-dom": "18.0.5",
     "eslint": "^8.16.0",
     "eslint-config-next": "12.1.6",
+    "husky": "^8.0.0",
     "sass": "^1.52.1",
     "typescript": "4.7.2"
   },
