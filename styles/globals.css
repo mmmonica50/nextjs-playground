@@ -14,3 +14,7 @@ a {
 * {
   box-sizing: border-box;
 }
+
+.mi-clase {
+  background: black;
+}
