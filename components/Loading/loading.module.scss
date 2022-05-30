@@ -1,3 +1,13 @@
 .loading {
-  background-color: #0070f3;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  color: #fff;
+  font-size: 3em;
+  background-color: rgba(#000, .6);
 }

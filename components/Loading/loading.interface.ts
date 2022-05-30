@@ -1,3 +1,5 @@
+import { ReactNode } from "react"
+
 export type LoadingProps = {
-  message?: string
+  children?: ReactNode
 }
